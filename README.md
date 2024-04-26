@@ -1,25 +1,19 @@
-# PythonCode_Maths
-# Precalculus 
+# PythonCode_Maths_Precalculus 
 # Parabola opening upwards or downwards (y-squared):
 import matplotlib.pyplot as plt
 import numpy as np
-# Define the parabola function for y^2 = 4ax
-def parabola_y_squared(x, a):
-    return np.sqrt(4*a*x)
-# Generate x values
-x_values = np.linspace(0, 10, 400)  # x must be non-negative for the square root
-# Generate y values for positive and negative branches
-y_values_positive = parabola_y_squared(x_values, 1)  # a = 1 for example
-y_values_negative = -parabola_y_squared(x_values, 1)
-# Plot the parabola branches
-plt.figure(figsize=(8, 6))
+def parabola_y_squared(x, a): 
+    return np.sqrt(4*a*x) # Define the parabola function for y^2 = 4ax
+x_values = np.linspace(0, 10, 400)
+# Generate x values and x must be non-negative for the square root
+y_values_positive = parabola_y_squared(x_values, 1) # Generate y values for positive and negative branches
+y_values_negative = -parabola_y_squared(x_values, 1) # a = 1 for example
+plt.figure(figsize=(8, 6)) # Plot the parabola branches
 plt.plot(x_values, y_values_positive, label='y = sqrt(4ax) - Positive branch')
 plt.plot(x_values, y_values_negative, label='y = -sqrt(4ax) - Negative branch')
-# Label the axes
-plt.xlabel('x')
+plt.xlabel('x') # Label the axes
 plt.ylabel('y')
-# Add a title
-plt.title('Plot of the Parabola y^2 = 4ax')
+plt.title('Plot of the Parabola y^2 = 4ax') #  Add a title
 # Add a legend
 plt.legend()
 # Show the plot
